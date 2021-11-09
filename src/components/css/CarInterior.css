@@ -1,0 +1,74 @@
+.container{
+    width: 100vw;
+    height:auto;
+    
+    background-color:black;
+    z-index:-1;
+    background-size:cover;
+    
+ 
+    
+}
+.interior{
+    color:rgb(12, 12, 12);
+    z-index:5;
+}
+.Text{
+    height:10vh;
+    width:100vw;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index: 10;
+
+}
+.Text>h1{
+    color:white;
+    font-weight: 600;
+    
+}
+.carinterior{
+    width: 100vw;
+    height:90vh;
+    z-index:100;
+   /* background-image:url(http://localhost:3000/images/msinterior.jpg);       can be used*/
+    background-repeat: no-repeat;
+    background-position:top center;
+    background-size:cover;
+    
+
+}
+.carinterior>h1{
+    text-align: center;
+    color:black;
+    margin-top:10vh;
+    
+    
+}
+.slideshow{
+    width:100vw;
+    height:100vh;
+    background-color:black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.gridimg {
+   
+    width:100vw;
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+
+}
+@media screen and (max-width:900px){
+    .container{
+        height:auto;
+    }
+    .gridimg {
+    height:auto;
+    }
+    
+}

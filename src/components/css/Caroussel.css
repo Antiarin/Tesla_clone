@@ -1,0 +1,52 @@
+.carousel{
+    width:80vw;
+    height:80vh;
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.carouselInner{
+    
+    height:100%;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    
+    
+
+}
+
+.left>.MuiSvgIcon-root{
+    margin-left:10px;
+    
+    fill:white;
+}
+     
+    
+
+.right, .left{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    height:35px;
+    width: 35px;
+    background-color: rgba(0,0,0, 0.3);
+    border:white solid 3px;
+    
+    margin-right:40px;
+    margin-left: 40px;
+    
+    cursor: pointer;
+   
+
+}
+.right> .MuiSvgIcon-root{
+    fill:white;
+}
+
