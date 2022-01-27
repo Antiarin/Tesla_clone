@@ -9,22 +9,20 @@ import {
    useNavigate
 } from "react-router-dom";
 import HomeCar from './components/ModelSX/HomeCar'
-import Login from './screen/Login/Login';
+import Login from './containers/Login/Login';
+import Signup from './containers/Signup/Signup';
+import Home from './containers/Home/Home';
+import Account from './containers/Account/Account';
+//redux
 import { useSelector, useDispatch } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
-import Signup from './screen/Signup/Signup';
-
+//firebase
 import { auth } from './firebase/Firebase'
 import { onAuthStateChanged } from "firebase/auth";
-import Home from './screen/Home/Home';
-import Account from './screen/Account/Account';
 function App() {
    const user = useSelector(selectUser)
    const dispatch = useDispatch()
-
    useEffect(() => {
-
-
       onAuthStateChanged(auth, (userAuth) => {
          if (userAuth) {
             // User is signed in, see docs for a list of available properties
@@ -59,8 +57,6 @@ function App() {
                <Route path="/account" element={<Account />}></Route>
             </Routes>
          </BrowserRouter>
-
-
       </div>
 
    );
