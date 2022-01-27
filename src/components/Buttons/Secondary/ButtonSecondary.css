@@ -1,0 +1,20 @@
+.buttonSecondary {
+    width:100%;
+    background-color: transparent;
+    border: 3px solid #171a20 ;
+    padding: 10px 40px;
+    border-radius: 50px;
+    color: #171a20 ;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 30px;
+    transition: all .4s ease-in-out;
+
+}
+.buttonSecondary:hover{
+    background-color: #171a20;
+    color:white;
+
+} 
