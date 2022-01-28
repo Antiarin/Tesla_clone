@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Hero from '../../components/Hero/Hero';
-import Model_3 from "../../images/model-3-main.png"
 import Beyond from '../../components/Carcomponent/Beyond/Beyond';
 import Interior from '../../components/Carcomponent/Interior/Interior';
 function Model3() {
@@ -11,7 +10,7 @@ function Model3() {
     });
     return (
         <Container>
-            <Hero CarName="Model 3" backgroundImg={Model_3} Plaid={false} color="white"/>
+            <Hero CarName="Model 3" backgroundImg="https://firebasestorage.googleapis.com/v0/b/the-tesla-clone.appspot.com/o/model-3-main.png?alt=media&token=6f288745-1035-4dfa-b608-ac21242080f8" Plaid={false} color="white"/>
             <Interior/>
             <Beyond/>
         </Container>

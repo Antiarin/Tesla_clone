@@ -1,11 +1,6 @@
-import msCenterdisplay from "../images/msCenterdisplay.jpg";
-import steering from "../images/steering.jpg";
-import msdisplay from "../images/msdisplay.jpg";
-import secondrow from "../images/secondrow.jpg";
-
 export const IMAGES = [
-    { title: '17" Cinematic Display', description: "With 2200x1300 resolution, ultra bright, true colors and exceptional responsiveness, the new center display is the best screen to watch anywhere.", img: msCenterdisplay },
-    { title: 'Focus on Driving', description: "The ultimate focus on driving: no stalks, no shifting. Model S is the best car to drive, and the best car to be driven in.", img: steering },
-    { title: 'Perfect Environment', description: "The ultimate focus on driving: no stalks, no shifting. Model S is the best car to drive, and the best car to be driven in.", img: msdisplay },
-    { title: 'Redesigned Second Row', description: "Seating for three adults, with extra legroom, headroom and a stowable armrest with integrated storage and wireless charging.", img: secondrow }
+    { title: '17" Cinematic Display', description: "With 2200x1300 resolution, ultra bright, true colors and exceptional responsiveness, the new center display is the best screen to watch anywhere.", img: "https://firebasestorage.googleapis.com/v0/b/the-tesla-clone.appspot.com/o/msCenterdisplay.jpg?alt=media&token=c1f2dc77-a084-40d1-ab36-53f94d68af05" },
+    { title: 'Focus on Driving', description: "The ultimate focus on driving: no stalks, no shifting. Model S is the best car to drive, and the best car to be driven in.", img: "https://firebasestorage.googleapis.com/v0/b/the-tesla-clone.appspot.com/o/steering.jpg?alt=media&token=268eefb0-2e7b-4d03-9d91-227e82228e25" },
+    { title: 'Perfect Environment', description: "The ultimate focus on driving: no stalks, no shifting. Model S is the best car to drive, and the best car to be driven in.", img: "https://firebasestorage.googleapis.com/v0/b/the-tesla-clone.appspot.com/o/msdisplay.jpg?alt=media&token=ba41231c-7da2-4b9b-9791-c39a8939fb92" },
+    { title: 'Redesigned Second Row', description: "Seating for three adults, with extra legroom, headroom and a stowable armrest with integrated storage and wireless charging.", img: "https://firebasestorage.googleapis.com/v0/b/the-tesla-clone.appspot.com/o/secondrow.jpg?alt=media&token=29e557d4-6b60-49ff-b846-7e4e643a9c1f" }
 ];

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
-import { signup } from '../../firebase/Firebase';
+import { signup, updateprofile } from '../../firebase/Firebase';
 import { useDispatch } from 'react-redux'
 import { login } from '../../features/userSlice'
 import './Signup.css'
@@ -14,7 +14,7 @@ function Signup() {
     const [lName, setlName] = useState('')
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const signUp = async (e) => {
+    const signUp = (e) => {
         e.preventDefault()
         if (!fName) {
             return alert('Please enter a First Name')
@@ -22,7 +22,8 @@ function Signup() {
         if (!lName) {
             return alert('Please enter a Last Name')
         }
-        await signup(email, password).then((userAuth) => {
+        signup(email, password).then((userAuth) => {
+            updateprofile(fName);
             dispatch(
                 login(
                     {

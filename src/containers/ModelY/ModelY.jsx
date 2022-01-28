@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Beyond from '../../components/Carcomponent/Beyond/Beyond';
 import Interior from '../../components/Carcomponent/Interior/Interior';
 import Hero from '../../components/Hero/Hero';
-import Model_Y from "../../images/model-y-main.png"
 function ModelY() {
     useEffect(() =>{
         window.scrollTo(0,0)
@@ -11,7 +10,7 @@ function ModelY() {
     });
     return (
         <Container>
-            <Hero CarName="Model Y" backgroundImg={Model_Y} Plaid={false} color="white" />
+            <Hero CarName="Model Y" backgroundImg="https://firebasestorage.googleapis.com/v0/b/the-tesla-clone.appspot.com/o/model-y-main.png?alt=media&token=d42899c7-993e-4222-aded-1694b2314be0" Plaid={false} color="white" />
             <Interior/>
             <Beyond/>
         </Container>

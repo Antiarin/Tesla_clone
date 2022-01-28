@@ -15,9 +15,9 @@ function Login() {
      const dispatch= useDispatch() 
      const navigate= useNavigate() // useNavigate instead of useHistory in v6 history.push()has changed to navigate()  
 
-    const signIn= async (e)=>{
+    const signIn= (e)=>{
         e.preventDefault() 
-         await signin( email, password).then((userAuth) => {
+          signin( email, password).then((userAuth) => {
           // Signed in 
           dispatch(
               login({
@@ -33,7 +33,7 @@ function Login() {
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          alert(error.message);
+          alert(errorMessage);
         });
 
     }

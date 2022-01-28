@@ -1,16 +1,20 @@
 import React from "react";
+import { Fade } from "react-reveal";
 import styled from "styled-components";
 import Header from "../Header/Header";
-function Hero({ CarName, Plaid, backgroundImg, color,bool}) {
+function Hero({ CarName, Plaid, backgroundImg, color }) {
   return (
     <Container bgImage={backgroundImg} textcolor={color}>
-      <Header fontcolor={color} boole={bool}/>
-      <ItemText >
-        <h1 >{CarName} </h1>
-        {Plaid && <p> Plaid</p>}
-      </ItemText>
+      <Header fontcolor={color}/>
+      <Fade bottom>
+        <ItemText textcolor={color}>
+          <h1>{CarName} </h1>
+          {Plaid && <p> Plaid</p>}
+        </ItemText>
+      </Fade>
       <Wrap>
         <BottomText>
+        <Fade bottom>
           <Text1>
             <h2>396mi</h2>
             <p> Range (EPA est.) </p>
@@ -28,6 +32,7 @@ function Hero({ CarName, Plaid, backgroundImg, color,bool}) {
             <p>Peak Power</p>
           </Text4>
           <Button>order now</Button>
+        </Fade>
         </BottomText>
         <DownArrow src="/images/down-arrow.svg" />
       </Wrap>
@@ -46,21 +51,21 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  color:${(props) =>(`${props.textcolor}`)};
+  color: ${(props) => `${props.textcolor}`};
 `;
 const ItemText = styled.div`
   text-align: center;
   justify-content: center;
   margin-top: 15vh;
-  color:inherit;
+  color: ${(props) => `${props.textcolor}`};
   h1 {
     font-size: 40px;
     text-spacing: 1px;
     color: inherit;
   }
-  p{
-    color:inherit;
-    font-size:17px;
+  p {
+    color: inherit;
+    font-size: 17px;
   }
 `;
 const Wrap = styled.div`

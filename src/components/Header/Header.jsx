@@ -4,7 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Link, useNavigate } from "react-router-dom";
 import { BURGERNAV_ITEMS, PRODUCTS } from "../../Helpers/Products";
 import { useDispatch, useSelector } from "react-redux";
-import { logout, selectUser } from "../../features/userSlice";
+import { logout, selectIsloggedIn } from "../../features/userSlice";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase/Firebase";
 import Logo from "../../images/teslalogo.png";
@@ -38,7 +38,7 @@ const RightMenu_after_login = ({ setValue, onClick, font_color }) => {
 };
 
 function Header({ fontcolor }) {
-  const user = useSelector(selectUser);
+  const isloggedIn = useSelector(selectIsloggedIn);
   const [burgerStatus, setBurgerStatus] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -72,7 +72,7 @@ function Header({ fontcolor }) {
           <hr />
         </ul>
       </Menu>
-      {user ? (
+      {isloggedIn ? (
         <RightMenu_after_login
           font_color={fontcolor}
           setValue={setBurgerStatus}
@@ -282,7 +282,6 @@ const RightMenu = styled.div`
      width:200px;
      margin-right:10px;
      justify-content:center;
-     height:100%
      min-height:60px;
      padding-bottom:20px;
      border-radius: 10px;
@@ -368,14 +367,35 @@ const RightMenu = styled.div`
           width: 29%;
         }
       `};
+    };
+      @media(max-width:400px){
+        height:100%;
+        width:150px;
+        ul{
+        display:flex;
+        padding-top:20px;
+        justify-content:flex-end; 
+        align-items:flex-end;
+        li{
+          padding:0;
+          margin:0;
+        }
+
+        .menu, .eight{
+          width:50%
+        }
+        .seven{
+          display:none;
+        }
+        
+        .hr{
+          display:none;
+        }
+        };}
+    
 
 
-  
-   
-@media(max-width:1161px){
-    justify-content:flex-end;
-
-}
+      
 }
 `;
 const RightMenu_2 = styled.div`
@@ -385,6 +405,7 @@ const RightMenu_2 = styled.div`
   width: 300px;
   margin-right: 10px;
   color: inherit;
+  min-height: 60px;
   justify-content: center;
   padding-bottom: 20px;
   border-radius: 10px;
@@ -481,29 +502,39 @@ const RightMenu_2 = styled.div`
           margin-left: 79%;
           width: 21%;
         }
-      `}
+      `};
+    };
     @media (max-width: 1161px) {
       margin: 0 10px;
     }
-  }
-  .one {
-    @media (max-width: 1161px) {
-      display: none;
-    }
-  }
-  .two {
-    @media (max-width: 1161px) {
-      display: none;
-    }
-  }
 
-  @media (max-width: 1350px) {
-    margin-right: 30px;
-  }
+    @media(max-width:500px){
+      width:150px;
+      height:100%;
+      ul{
+        display:flex;
+        padding-top:20px;
+        align-items: flex-end;
+        justify-content: flex-end;
+        li{
+          padding:0;
+          margin:0;
+        }
+        .seven,  .logout{
+          
+          display:none;
+        }
+        .eight, .menu{
+                width:50%;    }
+      }
+        hr{
+          display:none;
+        }
+       
+      }
+    }
 
-  @media (max-width: 1161px) {
-    justify-content: flex-end;
-  }
+    
 `;
 
 const BurgerNav = styled.div`
@@ -536,6 +567,10 @@ const BurgerNav = styled.div`
     padding: 15px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     color: inherit;
+    @media(min-width:900px){
+    &:hover{
+      box-shadow:-4px -4px 13px #0000001a inset;
+    }}
   }
   ${(props) =>
     props.textcolor === "white" &&
@@ -543,6 +578,10 @@ const BurgerNav = styled.div`
       background: #222222;
       li {
         border-bottom: 1px solid white;
+        @media(min-width:900px){
+          &:hover{
+            box-shadow:-4px -4px 13px #fffbfbb3 inset;
+          }}
       }
     `};
   @media (max-width: 430px) {

@@ -55,8 +55,7 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: space-between; // vertical-->>> usually it is for horizontal but as we used flex direction =column
   align-items: center; //horizontal-->>> usually it is for vertical but as we used flex direction =column
-  background-image: ${(props) =>
-    `url("./images/${props.bgImage}")`}; // syntax for using props in styled components
+  background-image: ${(props) =>`url(${props.bgImage})`}; // syntax for using props in styled components
 `;
 const ItemText = styled.div`
   margin-top: 15vh;

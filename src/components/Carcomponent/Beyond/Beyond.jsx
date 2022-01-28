@@ -1,40 +1,47 @@
 import React from "react";
+import { Fade } from "react-reveal";
 import styled from "styled-components";
-import Models from "../../../images/modelsblack.png"
-
 function Beyond() {
   return (
     <>
-      <Wrap bgImage={Models}>
-        <Text1>
-          <h4>1020hp</h4>
-          <p>Peak power</p>
-        </Text1>
-        <Text2>
-          <h4>9.23s</h4>
-          <p>@155 mph 1/4 mile</p>
-        </Text2>
-        <Text3>
-          <h4>1.99s</h4>
-          <p>0-60 mph*</p>
-        </Text3>
+      <Wrap bgImage="https://firebasestorage.googleapis.com/v0/b/the-tesla-clone.appspot.com/o/modelsblack.png?alt=media&token=b9036e6b-b0d3-44bd-a67d-be651fb4f1cc">
+        <Fade bottom>
+          <Text1>
+            <h4>1020hp</h4>
+            <p>Peak power</p>
+          </Text1>
+          <Text2>
+            <h4>9.23s</h4>
+            <p>@155 mph 1/4 mile</p>
+          </Text2>
+          <Text3>
+            <h4>1.99s</h4>
+            <p>0-60 mph*</p>
+          </Text3>
+        </Fade>
       </Wrap>
       <Body>
         <Container1>
-          <h3>Plaid</h3>
-          <h1>Beyond Ludicrous</h1>
+          <Fade left>
+            <h3>Plaid</h3>
+            <h1>Beyond Ludicrous</h1>
+          </Fade>
         </Container1>
-
         <Container2>
-          <p>
-            With the longest range and quickest acceleration of any electric
-            vehicle in production, Model S Plaid is the highest performing sedan
-            ever built. All Model S powertrains, with updated battery
-            architecture, are capable of back-to-back, consistent 1/4 mile runs.
-          </p>
+          <Fade right>
+            <p>
+              With the longest range and quickest acceleration of any electric
+              vehicle in production, Model S Plaid is the highest performing
+              sedan ever built. All Model S powertrains, with updated battery
+              architecture, are capable of back-to-back, consistent 1/4 mile
+              runs.
+            </p>
+          </Fade>
         </Container2>
         <Button>
-          <p>Order Now</p>
+          <Fade left>
+            <p>Order Now</p>
+          </Fade>
         </Button>
       </Body>
     </>
@@ -45,7 +52,7 @@ export default Beyond;
 const Wrap = styled.div`
   width: 100vw;
   height: 70vh;
-  background-image:${(props)=> `url(${props.bgImage})`};
+  background-image: ${(props) => `url(${props.bgImage})`};
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

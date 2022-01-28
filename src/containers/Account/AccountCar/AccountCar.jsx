@@ -3,10 +3,12 @@ import ButtonPrimary from '../../../components/Buttons/Primary/ButtonPrimary'
 import ButtonSecondary from '../../../components/Buttons/Secondary/ButtonSecondary'
 import styled from "styled-components"
 import './AccountCar.css'
+import { Fade } from 'react-reveal'
 
 function AccountCar({ imgSrc, model, testDrive }) {
     return (
         <Car bgImage={imgSrc} >
+            <Fade bottom>
              <div className='car__model'>
                  <h2 >{model}</h2>
                  <div className='car__actions'>
@@ -18,6 +20,7 @@ function AccountCar({ imgSrc, model, testDrive }) {
                      your trade-in or apply for leasing
                  </p>
             </div>
+            </Fade>
 
         </Car>
     )
