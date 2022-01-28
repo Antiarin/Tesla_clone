@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 function Hero({ CarName, Plaid, backgroundImg, color }) {
   return (
     <Container bgImage={backgroundImg} textcolor={color}>
-      <Header fontcolor={color}/>
+      <Header fontcolor={color} />
       <Fade bottom>
         <ItemText textcolor={color}>
           <h1>{CarName} </h1>
@@ -13,29 +13,36 @@ function Hero({ CarName, Plaid, backgroundImg, color }) {
         </ItemText>
       </Fade>
       <Wrap>
-        <BottomText>
-        <Fade bottom>
-          <Text1>
-            <h2>396mi</h2>
-            <p> Range (EPA est.) </p>
-          </Text1>
-          <Text2>
-            <h2>1.99s</h2>
-            <p>0-60 mph*</p>
-          </Text2>
-          <Text3>
-            <h2>200mph</h2>
-            <p>Top Speed</p>
-          </Text3>
-          <Text4>
-            <h2>1020hp</h2>
-            <p>Peak Power</p>
-          </Text4>
-          <Button>order now</Button>
-        </Fade>
-        </BottomText>
-        <DownArrow src="/images/down-arrow.svg" />
-      </Wrap>
+          <BottomText>
+            <Fade bottom>
+            <Text1>
+              <h2>396mi</h2>
+              <p> Range (EPA est.) </p>
+            </Text1>
+            </Fade>
+            <Fade bottom>
+            <Text2>
+              <h2>1.99s</h2>
+              <p>0-60 mph*</p>
+            </Text2></Fade>
+            <Fade bottom>
+            <Text3>
+              <h2>200mph</h2>
+              <p>Top Speed</p>
+            </Text3>
+            </Fade>
+            <Fade bottom>
+            <Text4>
+              <h2>1020hp</h2>
+              <p>Peak Power</p>
+            </Text4>
+            </Fade>
+            <Button>order now</Button>
+            
+          </BottomText>
+          <DownArrow src="/images/down-arrow.svg" />
+        </Wrap>
+      
     </Container>
   );
 }
