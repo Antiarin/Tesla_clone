@@ -1,13 +1,9 @@
 .container{
     width: 100vw;
     height:auto;
-    
     background-color:black;
     z-index:-1;
     background-size:cover;
-    
- 
-    
 }
 .interior{
     color:rgb(12, 12, 12);
@@ -35,15 +31,11 @@
     background-repeat: no-repeat;
     background-position:top center;
     background-size:cover;
-    
-
 }
 .carinterior>h1{
     text-align: center;
     color:black;
     margin-top:10vh;
-    
-    
 }
 .slideshow{
     width:100vw;
@@ -54,7 +46,6 @@
     align-items: center;
 }
 .gridimg {
-   
     width:100vw;
     height:auto;
     display: flex;

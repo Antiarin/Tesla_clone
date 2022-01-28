@@ -20,7 +20,7 @@ export const PRODUCTS=[
         id:2,
         classname:"two",
         name:"Model 3",
-        link:"/models",
+        link:"/model3",
         img:Model3,
         
     },
@@ -28,29 +28,29 @@ export const PRODUCTS=[
         id:3,
         classname:"three",
         name:"Model X",
-        link:"/models",
+        link:"/modelx",
         img:ModelX,
     },
     {
         id:4,
         classname:"four",
         name:"Model Y",
-        link:"/models",
+        link:"/modely",
         img:ModelY,
     },
     {
         id:5,
         classname:"five",
         name:"Solar Panels",
-        link:"/models",
+        link:"/solarpanel",
         img:SolarPanel,
 
     },
     {
         id:6,
         classname:"six",
-        name:"Sun Roof",
-        link:"/models",
+        name:"Solar Roof",
+        link:"/solarroof",
         img:SolarRoof,
     },
 
@@ -68,7 +68,7 @@ export const PRODUCTS=[
      },  
 ];
 
-export const BurgerNav_items=[
+export const BURGERNAV_ITEMS=[
     
         {
             id:"one",
@@ -78,27 +78,27 @@ export const BurgerNav_items=[
         {
             id:"two",
             name:"Model 3",
-            link:"/models"
+            link:"/model3"
         },
         {
             id:"three",
             name:"Model X",
-            link:"/models"
+            link:"/modelx"
         },
         {
             id:"four",
             name:"Model Y",
-            link:"/models"
+            link:"/modely"
         },
         {
             id:"five",
             name:"Solar Panels",
-            link:"/models"
+            link:"/solarpanel"
         },
         {
             id:"six",
-            name:"Sun Roof",
-            link:"/models"
+            name:"Solar Roof",
+            link:"/solarroof"
         },
         {
             id:"seven",

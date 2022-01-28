@@ -8,7 +8,7 @@ import {
    Route,
    useNavigate
 } from "react-router-dom";
-import HomeCar from './components/ModelSX/HomeCar'
+
 import Login from './containers/Login/Login';
 import Signup from './containers/Signup/Signup';
 import Home from './containers/Home/Home';
@@ -19,8 +19,12 @@ import { login, logout, selectUser } from './features/userSlice';
 //firebase
 import { auth } from './firebase/Firebase'
 import { onAuthStateChanged } from "firebase/auth";
+import ModelS from './containers/ModelS/ModelS';
+import Model3 from './containers/Model3/Model3';
+import ModelY from './containers/ModelY/ModelY';
+import ModelX from './containers/ModelX/ModelX';
 function App() {
-   const user = useSelector(selectUser)
+   const user = useSelector(selectUser);
    const dispatch = useDispatch()
    useEffect(() => {
       onAuthStateChanged(auth, (userAuth) => {
@@ -39,8 +43,6 @@ function App() {
          } else {
             // User is signed out
             dispatch(logout())
-
-
          }
       })
    }, [dispatch]);
@@ -49,7 +51,12 @@ function App() {
          <BrowserRouter>
             <Routes>
                <Route path="/" exact element={<Home />}></Route>
-               <Route path="/models" element={<HomeCar />}></Route>
+               <Route path="/models" element={<ModelS />}></Route>
+               <Route path="/model3" element={<Model3 />}></Route>
+               <Route path="/modelx" element={<ModelX />}></Route>
+               <Route path="/modely" element={<ModelY />}></Route>
+               <Route path="/solarpanel" element={<Model3 />}></Route>
+               <Route path="/solarroof" element={<Model3 />}></Route>
                <Route path="/login" element={<Login />}></Route>
                {/* <Route path="/login" >{!user?<Login/>} */}
                {/* // </Route> in router v5 this can b e done not in v6 cause it handles the server side routing */}

@@ -9,9 +9,6 @@ function Electric() {
             </Divtop>
             <Divmiddle>
                 <Mid src="./images/Model-S-Performance-Tri-Motor-Desktop.jpg"/>
-
-                
-
             </Divmiddle>
 
             <Divbottom>
@@ -45,9 +42,6 @@ const Divmiddle=styled.div`
 const Mid=styled.img`
      width:65vw;
      height:auto;
-    
-     
-     
 `
 const Divbottom=styled.div`
      flex:2.3;
