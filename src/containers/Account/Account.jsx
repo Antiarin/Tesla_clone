@@ -37,6 +37,9 @@ function Account() {
       navigate("/login");
     }
   }, [isloggedIn, isloading]);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <>
